@@ -1,0 +1,16 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Dealgames | Listing{% endblock %}
+
+{% block body %}
+
+<img src="{{asset('images/ps4.jpg')}}" alt="">
+<h1>{{listing.title}}</h1>
+<h3>{{listing.category}}</h3>
+<p>{{listing.publishedAt|date('d M Y')}}</p>
+<h3>Test Username</h3>
+<p><a href="">Contact</a></p>
+<h3>Test Description</h3>
+<p>{{listing.description}}</p>
+
+{% endblock %}

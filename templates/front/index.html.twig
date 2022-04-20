@@ -1,0 +1,25 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Dealgames | Home{% endblock %}
+
+{% block body %}
+
+<div class="d-flex justify-content-around pt-5">
+{% for listing in listings %}
+  <div class="card">
+    <div class="card-text">{{listing.id}}</div>
+    <a href="{{path('app_listing', {id:listing.id})}}">
+      <div class="card-body">
+        <h5 class="card-title text-secondary text-center pb-2">{{ listing }}</h5>
+        <p class="card-text">{{ listing.description|u.truncate(100, '...', false) }}</p>
+        <p class="text-muted text-center">Posted : {{ listing.publishedAt|date('d M Y') }}</p>
+      </div>
+      <img class="card-img" src="{{asset('images/ps4.jpg')}}" alt="Card image">
+      <p class="card-text">Category : {{listing.category}}</p>
+    </a>
+  </div>
+{% endfor %}
+</div>
+  
+
+{% endblock %}

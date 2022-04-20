@@ -1,1 +1,36 @@
 @import "~bootstrap/scss/bootstrap";
+
+html{
+    height: 100%;
+}
+
+body{
+    position: relative;
+    min-height: 100%;
+}
+
+footer{
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
+
+.card{
+    max-width: 300px;
+    -img {
+        max-width: 300px;
+        max-height: 150px;
+    }
+}
+
+a {
+    text-decoration: none;
+    color: black;
+    :hover{
+        color: black;
+    }
+}
+
+body {
+    height: 100vh;
+}
